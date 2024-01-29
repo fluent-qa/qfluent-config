@@ -5,7 +5,7 @@
 - Read Configuration from file
 
 ```shell
-  appconfig, _ := NewYamlConfig("config.yaml")
+    appconfig, _ := NewYamlConfig("config.yaml")
 	result := appconfig.Viper.Get("name")
 	assert.Equal(t, "FLUENT", result)
 	named := &NamedMan{}
