@@ -1,4 +1,4 @@
-package config
+package qfluent_config
 
 import (
 	"fmt"
