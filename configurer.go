@@ -19,7 +19,7 @@ type AppConfig struct {
 func NewYamlConfig(filePath any) (*AppConfig, error) {
 	appConfig := &AppConfig{
 		Viper:           viper.New(),
-		SavedConfigFile: "config-backup",
+		SavedConfigFile: "config-json-example.json",
 	}
 	if filePath != nil && reflect.TypeOf(filePath).Kind() == reflect.String {
 		appConfig.Viper.SetConfigType(DefaultConfigType)
