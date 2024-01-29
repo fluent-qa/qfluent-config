@@ -1,4 +1,4 @@
-package qfluent_config
+package qfluentconf
 
 import (
 	"bytes"
