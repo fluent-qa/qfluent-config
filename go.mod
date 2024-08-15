@@ -1,6 +1,6 @@
 module github.com/fluent-qa/qfluentconf
 
-go 1.21.4
+go 1.22.6
 
 require (
 	github.com/fsnotify/fsnotify v1.7.0

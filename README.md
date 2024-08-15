@@ -1,8 +1,10 @@
-# GO-Lib: Configurations
+# Go Configurations
 
 ## How to Use
 
 - Read Configuration from file
+- Configuration to Struct
+- Configuration to Struct by Key:nested configuration
 
 ```shell
     appconfig, _ := NewYamlConfig("config.yaml")
