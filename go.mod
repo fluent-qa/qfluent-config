@@ -1,4 +1,4 @@
-module github.com/fluent-qa/qfluentconf
+module github.com/fluent-qa/qgoconf
 
 go 1.22.6
 

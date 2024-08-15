@@ -1,13 +1,14 @@
-package qfluentconf
+package qgoconf
 
 import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/fsnotify/fsnotify"
-	"github.com/spf13/viper"
 	"log/slog"
 	"reflect"
+
+	"github.com/fsnotify/fsnotify"
+	"github.com/spf13/viper"
 )
 
 type AppConfig struct {

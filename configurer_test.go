@@ -1,9 +1,10 @@
-package qfluentconf
+package qgoconf
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 // `mapstructure:",squash"` is required for embedded structs

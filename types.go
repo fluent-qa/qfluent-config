@@ -1,4 +1,4 @@
-package qfluentconf
+package qgoconf
 
 import "errors"
 
