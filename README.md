@@ -2,7 +2,7 @@
 
 ## How to Use
 
-Stesp:
+Steps:
 - Define Configuration Struct
 ```go
 type testConfig struct {
