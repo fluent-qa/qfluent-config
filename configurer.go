@@ -11,20 +11,24 @@ import (
 	"github.com/spf13/viper"
 )
 
+/**
+
+**/
+
 type AppConfig struct {
 	Viper           *viper.Viper
 	ConfigFile      string
 	SavedConfigFile string
 }
 
-func NewYamlConfig(filePath any) (*AppConfig, error) {
+func NewYamlConfig(configFilePath any) (*AppConfig, error) {
 	appConfig := &AppConfig{
 		Viper:           viper.New(),
 		SavedConfigFile: "config-json-example.json",
 	}
-	if filePath != nil && reflect.TypeOf(filePath).Kind() == reflect.String {
+	if configFilePath != nil && reflect.TypeOf(configFilePath).Kind() == reflect.String {
 		appConfig.Viper.SetConfigType(DefaultConfigType)
-		appConfig.Viper.SetConfigFile(filePath.(string))
+		appConfig.Viper.SetConfigFile(configFilePath.(string))
 		err := appConfig.Viper.ReadInConfig()
 		if err != nil {
 			panic(err)
@@ -68,7 +72,7 @@ func (a *AppConfig) AddJsonConfig(config any) error {
 func (a *AppConfig) WriteConfig(filePath string) {
 	err := a.Viper.SafeWriteConfigAs(filePath)
 	if err != nil {
-		slog.Error("write configuration failed", err)
+		slog.Error("write configuration failed", "error", err)
 		_ = a.Viper.SafeWriteConfigAs(a.SavedConfigFile)
 		return
 	}
